@@ -1,6 +1,11 @@
 spring:
   application:
     name: Api-sum
+  redis:
+    database: 0
+    host: localhost
+    port: 8088
+    timeout: 60000
 datasource:
   sql-server:
     configurations:
@@ -16,3 +21,5 @@ server:
   port : 8086
 restTemplate:
   timeout: 60
+  extern-service:
+    url: 'https://tenpo-percentage.free.beeceptor.com/tenpo/percentage'

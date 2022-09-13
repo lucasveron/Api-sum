@@ -21,7 +21,6 @@ public class UserService {
     }
 
     public void loginUser(UserRequest loginRequest) {
-        //User user = userRepository.getUser(loginRequest);
-
+        //Not yet implemented
     }
 }

@@ -2,6 +2,7 @@ package com.tenpo.Apisum.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.gson.Gson;
 
 import java.io.Serializable;
 
@@ -29,4 +30,10 @@ public class PercentageRequest implements Serializable {
     public void setSecondNumber(int secondNumber) {
         this.secondNumber = secondNumber;
     }
+
+    @Override
+    public String toString(){
+        return new Gson().toJson(this, PercentageRequest.class);
+    }
+
 }
