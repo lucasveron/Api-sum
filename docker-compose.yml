@@ -1,6 +1,13 @@
 version: '3'
 
 services:
+  apisum:
+    image: apisum:0.0.1
+    ports:
+      - 8086:8086
+    volumes:
+      - ~/docker/redis:/urlshortner/logs
+#    network_mode: host
   redis:
     image: redis:latest
     hostname: localhost
