@@ -18,11 +18,11 @@ ENV ARTIFACT_NAME=Api-sum-0.0.1.jar
 ENV APP_HOME=/usr/app/
     
 WORKDIR $APP_HOME
-COPY --from=TEMP_BUILD_IMAGE $APP_HOME/build/libs/$ARTIFACT_NAME .
+COPY --from=TEMP_BUILD_IMAGE $APP_HOME/build/libs/Api-sum-0.0.1.jar .
 
-#ADD build/libs/${ARTIFACT_NAME} /app/$ARTIFACT_NAME
+#ADD build/libs/Api-sum-0.0.1.jar /app/Api-sum-0.0.1.jar
 
 EXPOSE 8086
 #EXPOSE 6379
-#ENTRYPOINT exec java -jar $ARTIFACT_NAME
-ENTRYPOINT ["java", "-jar", "/app/${ARTIFACT_NAME}"]
+#ENTRYPOINT exec java -jar Api-sum-0.0.1.jar
+ENTRYPOINT ["java", "-jar", "/app/Api-sum-0.0.1.jar"]
